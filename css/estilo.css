@@ -316,8 +316,52 @@ Novos codigos */
   color: #8a05be;
 }
 
+@media (max-width: 575.98px) {
+  #bordin {
+    /* margin-top: -119px; */
+    margin-bottom: 26px !important;
+    margin-right: 200px !important;
+  }
+
+  #bordinsobre h2 {
+    margin-left: 173px !important;
+  }
+
+  #bordin h2 {
+    margin-left: 59px !important;
+  }
+
+  #sobre p {
+    margin: 10px 15px;
+    font-size: 0.9em !important;
+  }
+
+  .row {
+    flex-wrap: wrap;
+  }
+
+  #bordinskills h2 {
+    margin-left: 185px !important;
+  }
+
+  #bordincontatos h2 {
+    margin-left: 178px;
+  }
+
+  #contatos p {
+    font-size: 1rem;
+  }
+
+  .botaocontato {
+    margin-left: 166px !important;
+  }
+}
+
 .bg {
   background-color: #8a05be;
+}
+.botaocontato {
+  margin-left: 616px;
 }
 
 @font-face {
@@ -551,7 +595,7 @@ video {
 
   text-transform: uppercase !important;
   margin-bottom: 26px !important;
-  margin-left: 93px !important;
+  margin-left: 93px;
   font-family: 'Montserrat', sans-serif !important;
 }
 
