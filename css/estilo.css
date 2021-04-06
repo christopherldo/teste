@@ -65,6 +65,10 @@ ul {
   list-style: none;
 }
 
+/* hamburger */
+
+/* fim hamburger */
+
 #menu li + li {
   margin-left: 30px;
 }
@@ -185,6 +189,11 @@ Novos codigos */
 #contatos {
   height: 413px;
   margin-top: 56px;
+  align-items: center;
+  display: flex;
+  /* margin-left: 605px; */
+  flex-flow: column;
+  flex-flow: center;
   /* background: #f9f2fc; */
 }
 
@@ -202,7 +211,7 @@ Novos codigos */
   background: #8257e6;
 }
 
-#bordincontatos {
+.bordincontatos {
   border: 1px solid transparent;
 
   margin-bottom: 26px;
@@ -210,7 +219,7 @@ Novos codigos */
   margin-right: 0px;
 }
 
-#bordincontatos h2 {
+.bordincontatos h2 {
   margin-top: -2px;
 
   text-transform: uppercase !important;
@@ -291,10 +300,6 @@ Novos codigos */
   color: #fff;
 }
 
-/* .box-intro .btn {
-  margin-top: 20px;
-} */
-
 .btn {
   text-decoration: none;
   list-style: none;
@@ -317,18 +322,24 @@ Novos codigos */
 }
 
 @media (max-width: 575.98px) {
-  #bordin {
-    /* margin-top: -119px; */
+  #menu > li a {
+    display: none;
+  }
+  .bordin {
     margin-bottom: 26px !important;
-    margin-right: 200px !important;
+    margin-right: 47px !important;
   }
 
-  #bordinsobre h2 {
-    margin-left: 173px !important;
+  .on--left {
+    padding: 37px 48px !important;
   }
 
-  #bordin h2 {
-    margin-left: 59px !important;
+  .bordinsobre h2 {
+    margin-left: 112px !important;
+  }
+
+  .bordin h2 {
+    margin-left: 45px !important;
   }
 
   #sobre p {
@@ -340,28 +351,43 @@ Novos codigos */
     flex-wrap: wrap;
   }
 
-  #bordinskills h2 {
-    margin-left: 185px !important;
+  .bordinskills h2 {
+    margin-left: 119px !important;
   }
 
-  #bordincontatos h2 {
-    margin-left: 178px;
+  .bordin h2 {
+    margin-left: 119px;
   }
 
   #contatos p {
     font-size: 1rem;
   }
 
-  .botaocontato {
-    margin-left: 166px !important;
+  #home img {
+    display: none;
   }
+  .projetos {
+    --webkit-box-shadow: -4px 0 10px -3px rgb(0 0 0 / 20%);
+  }
+}
+
+/* Telefones em paisagem a tablet em retrato */
+@media (max-width: 767px) {
+  /* estilos aqui */
+}
+
+/* Tablet em retrato a paisagem e desktop */
+@media (min-width: 768px) and (max-width: 979px) {
+  /* estilos aqui */
+}
+
+/* Desktop grande */
+@media (min-width: 1200px) {
+  /* estilos aqui */
 }
 
 .bg {
   background-color: #8a05be;
-}
-.botaocontato {
-  margin-left: 616px;
 }
 
 @font-face {
@@ -582,31 +608,40 @@ video {
   line-height: 1.2em;
   color: #a6a6a5;
 }
-
-#bordin {
-  border: 1px solid transparent;
-  /* margin-top: -119px; */
-  margin-bottom: 26px;
-  margin-right: 996px;
+.bordin {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 25px 0;
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
 }
 
-#bordin h2 {
-  margin-top: -2px;
-
-  text-transform: uppercase !important;
-  margin-bottom: 26px !important;
-  margin-left: 93px;
-  font-family: 'Montserrat', sans-serif !important;
+.on--left {
+  padding: 37px 81px;
+  justify-content: flex-start;
 }
 
-#bordinsobre {
+.bordin h2::before {
+  content: '';
+  width: 5px;
+  height: 30px;
+  display: inline-flex;
+  position: absolute;
+  margin-left: -20px;
+  margin-top: 3px;
+  transform: rotate(-5deg);
+  background: #8257e6;
+}
+
+.bordinsobre {
   border: 1px solid transparent;
 
   margin-bottom: 26px;
   /* margin-right: 996px; */
 }
 
-#bordinsobre h2 {
+.bordinsobre h2 {
   margin-top: -2px;
   text-transform: uppercase !important;
   margin-bottom: 26px !important;
@@ -643,14 +678,13 @@ video {
   background: #8257e6;
 }
 
-#bordinskills {
+.bordinskills {
   border: 1px solid transparent;
 
   margin-bottom: 26px;
-  /* margin-right: 996px; */
 }
 
-#bordinskills h2 {
+.bordinskills h2 {
   margin-top: -2px;
 
   text-transform: uppercase !important;
@@ -686,7 +720,8 @@ video {
 
 #sobre {
   background: white;
-  height: 800px;
+  min-height: 800px;
+  overflow: hidden;
 }
 
 .link-oficial {
